@@ -1,10 +1,10 @@
-package com.robustbase.designpatterns.creational.singleton;
+package com.robustbase.designpatterns.creational.singleton.nonthreadsafe;
 
 /**
  * @author Atul Dwivedi
  * @date 03/07/21
  * <p>
- * A thread safe, lazy-instantiation implementation of Singleton Design Pattern.
+ * A non thread safe, lazy-instantiation implementation of Singleton Design Pattern.
  */
 public class Singleton {
 
@@ -13,7 +13,7 @@ public class Singleton {
     private Singleton() {
     }
 
-    public static synchronized Singleton getInstance() {
+    public static Singleton getInstance() {
 
         if (instance == null) {
             instance = new Singleton();
